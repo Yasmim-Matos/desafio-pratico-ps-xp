@@ -9,3 +9,14 @@ Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido 
 [Click here]() para visualizar a versão final do projeto no seu navegador.
 
 </details>
+
+## :toolbox: Ferramentas Utilizadas
+<details>
+  <summary markdown="span"><strong>:hammer_and_wrench: Principais Ferramentas</strong></summary><br />
+ 
+* React
+* JavaScript
+* CSS
+* HTML
+
+</details>
