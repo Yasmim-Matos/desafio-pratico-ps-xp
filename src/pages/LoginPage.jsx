@@ -11,6 +11,12 @@ function LoginPage() {
                     name="input-email"
                     placeholder="Insira seu email aqui"
                 />
+
+                <input
+                    type="password"
+                    name="input-password"
+                    placeholder="Insira sua senha aqui"
+                />
             </div>
         </main>
     );
