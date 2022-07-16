@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DepositAndWithdrawal() {
+function DepositAndWithdrawalPage() {
     return (
         <main className="depositAndWithdrawal-container">
             <h1>Deposit And Withdrawal</h1>
@@ -8,4 +8,4 @@ function DepositAndWithdrawal() {
     );
 }
 
-export default DepositAndWithdrawal;
+export default DepositAndWithdrawalPage;
