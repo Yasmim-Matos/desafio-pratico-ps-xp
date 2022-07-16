@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function LoginPage() {
     return (
@@ -19,12 +20,14 @@ function LoginPage() {
                 />
             </div>
 
-            <button
-                type="button"
-                name="login-button"
-            >
-                Enter
-            </button>
+            <Link to="/depositAndWithdrawal">
+                <button
+                    type="button"
+                    name="login-button"
+                >
+                    Acessar
+                </button>
+            </Link>
         </main>
     );
 };
