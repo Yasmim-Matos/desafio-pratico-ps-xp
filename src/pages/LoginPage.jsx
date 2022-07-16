@@ -20,7 +20,7 @@ function LoginPage() {
                 />
             </div>
 
-            <Link to="/depositAndWithdrawal">
+            <Link to="/stocklist">
                 <button
                     type="button"
                     name="login-button"

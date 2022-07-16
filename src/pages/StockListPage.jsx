@@ -1,15 +1,15 @@
 import React from 'react';
 import Header from '../components/Header';
 
-function DepositAndWithdrawalPage() {
+function StockListPage() {
     return (
-        <main className="depositAndWithdrawal-container">
+        <main className="stock-list-container">
             <Header />
-            <h1>Deposit And Withdrawal</h1>
+            <h1>Stock List</h1>
 
             <button
                 type="button"
-                name="depoAndWithD-button"
+                name="stock-list-button"
             >
                 Depósito/Retirada
             </button>
@@ -17,4 +17,4 @@ function DepositAndWithdrawalPage() {
     );
 }
 
-export default DepositAndWithdrawalPage;
+export default StockListPage;
