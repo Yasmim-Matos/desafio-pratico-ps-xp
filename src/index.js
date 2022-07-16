@@ -13,7 +13,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter basename="/desafio-pratico-ps-xp">
       <App />
-    </BrowserRouter>,
+    </BrowserRouter>
   </React.StrictMode>
 );
 
