@@ -18,6 +18,13 @@ function LoginPage() {
                     placeholder="Insira sua senha aqui"
                 />
             </div>
+
+            <button
+                type="button"
+                name="login-button"
+            >
+                Enter
+            </button>
         </main>
     );
 };
