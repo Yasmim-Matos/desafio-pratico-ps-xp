@@ -34,6 +34,7 @@ function LoginPage() {
                     type="password"
                     name="input-password"
                     placeholder="Insira sua senha aqui"
+                    onChange={ ({ target: { value } }) => setPassword(value) }
                 />
             </div>
 
@@ -41,6 +42,7 @@ function LoginPage() {
                 <button
                     type="button"
                     name="login-button"
+                    onClick={ setNewState }
                 >
                     Acessar
                 </button>
