@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import AppContext from '../context/AppContext';
 import { Link } from 'react-router-dom';
 
 function LoginPage() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const {
+        setters: {
+            setUserEmail,
+            setUserPassword,
+        },
+    } = useContext(AppContext);
+
     return (
         <main className="login-container">
             <h1>Login</h1>
