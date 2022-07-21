@@ -4,7 +4,15 @@
 <details>
   <summary markdown="span"><strong>:bulb: Informações gerais sobre o Projeto</strong></summary><br />
 
-Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido por [Yasmim Matos](https://www.linkedin.com/in/yasmimmatos/) com o foco em desenvolver uma aplicação FrontEnd/Mobile.
+Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido por [Yasmim Matos](https://www.linkedin.com/in/yasmimmatos/) com o foco em desenvolver uma aplicação FrontEnd/Mobile para compra e venda de ações.
+
+[Click here]() para visualizar a versão final do projeto no seu navegador.
+
+</details>
+
+## :question: Como compilar o Projeto
+<details>
+  <summary markdown="span"><strong>:grey_exclamation: Descrição dos comandos necessários</strong></summary><br />
 
 [Click here]() para visualizar a versão final do projeto no seu navegador.
 
@@ -18,5 +26,7 @@ Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido 
 * JavaScript
 * CSS
 * HTML
+* Context API
+* Hooks
 
 </details>
