@@ -9,7 +9,8 @@ function StocksAvailableToInvest() {
                         <tr>
                             <th>Nome da Ação</th>
                             <th>Quantidade</th>
-                            <th>Valor Pago (R$)</th>
+                            <th>Valor Unitário (R$)</th>
+                            <th>Valor do Lote (R$)</th>
                             <th>Negociar</th>
                         </tr>
                     </thead>
