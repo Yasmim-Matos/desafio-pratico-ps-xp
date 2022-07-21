@@ -2,8 +2,8 @@ import React from 'react';
 import Header from '../components/Header';
 
 import { Link } from 'react-router-dom';
-import UserStocks from '../components/UserStocks';
-import StocksAvailableToInvest from '../components/StocksAvailableToInvest';
+import UserStocksTable from '../components/UserStocksTable';
+import StocksAvailableToInvestTable from '../components/StocksAvailableToInvestTable';
 
 function StockListPage() {
     return (
@@ -11,9 +11,9 @@ function StockListPage() {
             <Header />
             <h1>Stock List</h1>
 
-            <UserStocks />
+            <UserStocksTable />
 
-            <StocksAvailableToInvest />
+            <StocksAvailableToInvestTable />
 
             <Link to='/depositandwithdrawal'>
                 <button
