@@ -3,20 +3,26 @@ import AppContext from '../context/AppContext';
 import '../styles/Header.css';
 
 function Header() {
-    const { userData: { userEmail } } = useContext(AppContext);
+    const {
+        userData: {
+            userEmail,
+            userBalance,
+            userStock,
+        },
+    } = useContext(AppContext);
 
     return (
         <header className="header-container">
             <p>
                 Saldo:
                 {' '}
-                <span className="balance">Saldo Total</span>
+                <span className="balance">{ userBalance }</span>
             </p>
 
             <p>
                 Total de ações:
                 {' '}
-                <span className="stocks">Número de ações</span>
+                <span className="stocks">{ userStock }</span>
             </p>
 
             <p>
