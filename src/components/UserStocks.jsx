@@ -2,7 +2,7 @@ import React from 'react';
 
 function UserStocks() {
     return (
-        <main className="header-container">
+        <main className="user-stocks-container">
             <h3>Minhas ações</h3>
                 <table>
                     <thead>
