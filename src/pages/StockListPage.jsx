@@ -9,6 +9,9 @@ function StockListPage() {
             <Header />
             <h1>Stock List</h1>
 
+            <h3>Minhas ações</h3>
+
+            <h3>Disponíveis para investir</h3>
 
             <Link to='/depositandwithdrawal'>
                 <button
