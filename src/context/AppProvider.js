@@ -6,6 +6,8 @@ function AppProvider({ children }) {
     const [userEmail, setUserEmail] = useState('');
     const [userPassword, setUserPassword] = useState('');
 
+    const [userBalance, setUserBalance] = useState(0);
+
     const contextValue = {
         setters: {
             setUserEmail,
