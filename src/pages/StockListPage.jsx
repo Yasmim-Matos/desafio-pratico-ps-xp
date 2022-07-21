@@ -3,6 +3,7 @@ import Header from '../components/Header';
 
 import { Link } from 'react-router-dom';
 import UserStocks from '../components/UserStocks';
+import StocksAvailableToInvest from '../components/StocksAvailableToInvest';
 
 function StockListPage() {
     return (
@@ -12,7 +13,7 @@ function StockListPage() {
 
             <UserStocks />
 
-            <h3>Disponíveis para investir</h3>
+            <StocksAvailableToInvest />
 
             <Link to='/depositandwithdrawal'>
                 <button
