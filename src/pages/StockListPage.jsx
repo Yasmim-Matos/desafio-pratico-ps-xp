@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 
 import { Link } from 'react-router-dom';
+import UserStocks from '../components/UserStocks';
 
 function StockListPage() {
     return (
@@ -9,7 +10,7 @@ function StockListPage() {
             <Header />
             <h1>Stock List</h1>
 
-            <h3>Minhas ações</h3>
+            <UserStocks />
 
             <h3>Disponíveis para investir</h3>
 
