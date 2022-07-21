@@ -13,6 +13,11 @@ function LoginPage() {
         },
     } = useContext(AppContext);
 
+    const setNewState = () => {
+        setUserEmail(email);
+        setUserPassword(password);
+    }
+
     return (
         <main className="login-container">
             <h1>Login</h1>
@@ -22,6 +27,7 @@ function LoginPage() {
                     type="email"
                     name="input-email"
                     placeholder="Insira seu email aqui"
+                    onChange={ ({ target: { value } }) => setEmail(value) }
                 />
 
                 <input
