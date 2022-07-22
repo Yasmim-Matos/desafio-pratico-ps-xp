@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import AppContext from '../context/AppContext';
 
-function StocksBoughtData() {
+function UserStocksData() {
     const {
         userStockSetters: {
             setUserStockName,
@@ -88,4 +88,5 @@ function StocksBoughtData() {
         </>
     )
 }
-export default StocksBoughtData;
+
+export default UserStocksData;
