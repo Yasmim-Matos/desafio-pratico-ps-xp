@@ -7,8 +7,10 @@ function Header() {
         userData: {
             userEmail,
             userBalance,
-            userStock,
         },
+        /* userStockData: {
+            userStocksBought,
+        }, */
     } = useContext(AppContext);
 
     return (
@@ -19,11 +21,11 @@ function Header() {
                 <span className="balance">{ userBalance }</span>
             </p>
 
-            <p>
+            {/* <p>
                 Total de ações:
                 {' '}
-                <span className="stocks">{ userStock }</span>
-            </p>
+                <span className="stocks">{ userStocksBought }</span>
+            </p> */}
 
             <p>
                 Olá,
