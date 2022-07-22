@@ -37,51 +37,54 @@ function StocksBoughtData() {
         setUserAmountPaid([...userAmountPaid, allStocksBought[correctStockIndex].amountPaid]);
     }
 
-    return(
+    return (
         <>
-        { allStocksBought.length === 0
-                ? <p>Você não tem nenhuma ação comprada</p> 
-                :
-                    <table>
-                        <thead>
-                            <tr>
-                            <th>Nome da Ação</th>
-                            <th>Quantidade</th>
-                            <th>Valor Pago (R$)</th>
-                            <th>Negociar</th>
-                            </tr>
-                        </thead>
+            { allStocksBought.length === 0
+                    ? <p>Você não tem nenhuma ação comprada</p> 
+                    :
+                        <table>
+                            <thead>
+                                <tr>
+                                <th>Nome da Ação</th>
+                                <th>Quantidade</th>
+                                <th>Valor Pago (R$)</th>
+                                <th>Negociar</th>
+                                </tr>
+                            </thead>
 
-                        <tbody>
-                        { allStocksBought.map(({ stockName, qtdBought, amountPaid }) => {
-                                return (
-                                    <tr key={ stockName }>
-                                        <td>{ stockName }</td>
-                                        <td>{ qtdBought }</td>
-                                        <td>{ amountPaid }</td>
-                                        <td>
-                                            <button
-                                            type="button"
-                                            name="buy-button"
-                                            className={ stockName }
-                                            onClick={ (target) => setNewStateForStocks(target) }
-                                            >
-                                            C
-                                            </button>
-                                            <button
-                                            type="button"
-                                            name="sell-button"
-                                            onClick={ setNewStateForStocks }
-                                            >
-                                            V
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    );
-                                })}
-                        </tbody>
-                    </table>
-                }
+                            <tbody>
+                            { allStocksBought.map(({ stockName, qtdBought, amountPaid }) => {
+                                    return (
+                                        <tr key={ stockName }>
+                                            <td>{ stockName }</td>
+                                            <td>{ qtdBought }</td>
+                                            <td>{ amountPaid }</td>
+
+                                            <td>
+                                                <button
+                                                    type="button"
+                                                    name="buy-button"
+                                                    className={ stockName }
+                                                    onClick={ (target) => setNewStateForStocks(target) }
+                                                >
+                                                    C
+                                                </button>
+
+                                                <button
+                                                    type="button"
+                                                    name="sell-button"
+                                                    className={ stockName }
+                                                    onClick={ (target) => setNewStateForStocks(target) }
+                                                >
+                                                    V
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        );
+                                    })}
+                            </tbody>
+                        </table>
+            }
         </>
     )
 }
