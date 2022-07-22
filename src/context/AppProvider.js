@@ -7,20 +7,34 @@ function AppProvider({ children }) {
     const [userPassword, setUserPassword] = useState('');
 
     const [userBalance, setUserBalance] = useState(0);
-    const [userStock, setUserStock] = useState(0);
+
+    const [userStockName, setUserStockName] = useState([]);
+    const [userStocksBought, setUserStocksBought] = useState([]);
+    const [userAmountPaid, setUserAmountPaid] = useState([]);
+
+    /* const [stockInProgress, setStockInProgress] = useState([]); */
 
     const contextValue = {
-        setters: {
+        userSetters: {
             setUserEmail,
             setUserPassword,
             setUserBalance,
-            setUserStock,
         },
         userData: {
             userEmail,
             userPassword,
             userBalance,
-            userStock,
+        },
+
+        userStockSetters: {
+            setUserStockName,
+            setUserStocksBought,
+            setUserAmountPaid,
+        },
+        userStockData: {
+            userStockName,
+            userStocksBought,
+            userAmountPaid,
         },
     };
 
