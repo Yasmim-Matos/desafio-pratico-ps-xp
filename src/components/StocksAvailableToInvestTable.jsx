@@ -1,12 +1,12 @@
 import React from 'react';
-import StocksAvailableData from '../utils/StocksAvailableData';
+import StocksAvailableToInvestData from '../utils/StocksAvailableToInvestData';
 
 function StocksAvailableToInvest() {
     return (
         <main className="stocks-available-container">
             <h3>Disponíveis para investir</h3>
 
-            { StocksAvailableData.length === 0
+            { StocksAvailableToInvestData.length === 0
                 ? <p>Não existe nenhuma ação disponível para investir no momento</p> 
                 :
                 <table>
@@ -21,7 +21,7 @@ function StocksAvailableToInvest() {
                     </thead>
 
                     <tbody>
-                            { StocksAvailableData.map(({ stockName, qtdAvailable, unitValue, lotValue}) => {
+                            { StocksAvailableToInvestData.map(({ stockName, qtdAvailable, unitValue, lotValue}) => {
                                 return (
                                     <tr key={ stockName }>
                                         <td>{ stockName }</td>
