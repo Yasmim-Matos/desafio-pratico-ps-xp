@@ -7,7 +7,7 @@ function LoginPage() {
     const [password, setPassword] = useState('');
 
     const {
-        setters: {
+        userSetters: {
             setUserEmail,
             setUserPassword,
         },
