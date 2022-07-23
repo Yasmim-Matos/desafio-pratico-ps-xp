@@ -51,7 +51,6 @@ function BuyAndSellPage() {
                             </tr>
                         </tbody>
                 </table>
-            
             }
             
             <button
@@ -70,7 +69,7 @@ function BuyAndSellPage() {
                 Vender
             </button>
 
-            <input type="number" />
+            <input type="number" placeholder="Informe o Valor" />
 
             <Link to="/stocklist">
                 <button
@@ -80,27 +79,19 @@ function BuyAndSellPage() {
                 </button>
             </Link>
 
+            <button
+                type="button"
+            >
+                Confirmar
+            </button>
+
             <Link to="/depositandwithdrawal">
                 <button
                     type="button"
                 >
-                    Confirmar
+                    Depósito/Retirada
                 </button>
             </Link>
-
-            <button
-                type="button"
-                disabled={ true }
-            >
-                Depósito
-            </button>
-
-            <button
-                type="button"
-                disabled={ true }
-            >
-                Retirada
-            </button>
         </main>
     );
 }
