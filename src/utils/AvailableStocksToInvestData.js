@@ -20,7 +20,6 @@ function AvailableStocksToInvestData() {
         stockInProgress,
     } = useContext(AppContext);
 
-
     const availableStocksToInvest = [
         {
             stockName: 'XP3',
@@ -35,6 +34,16 @@ function AvailableStocksToInvestData() {
             lotValue: 100,
         },
     ];
+
+    const setNewStateForAvailableStocks = (stock) => {
+        const correctStockName = stock.target.className;
+        const correctStockIndex = availableStocksToInvest.findIndex(({stockName}) => stockName === correctStockName);
+
+        setAvailableStockName([...availableStockName, availableStocksToInvest[correctStockIndex].stockName]);
+        setAvailableStocksQuantity([...availableStocksQuantity, availableStocksToInvest[correctStockIndex].qtdAvailable]);
+        setUnitStockValue([...unitStockValue, availableStocksToInvest[correctStockIndex].unitValue]);
+        setLotStockValue([...lotStockValue, availableStocksToInvest[correctStockIndex].lotValue]);
+    }
 
     return (
         <>
