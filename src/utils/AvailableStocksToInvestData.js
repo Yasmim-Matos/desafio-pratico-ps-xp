@@ -16,8 +16,8 @@ function AvailableStocksToInvestData() {
             lotStockValue,
         },
 
-        setStockInProgress,
-        stockInProgress,
+        /* setStockInProgress,
+        stockInProgress, */
     } = useContext(AppContext);
 
     const availableStocksToInvest = [
@@ -74,6 +74,8 @@ function AvailableStocksToInvestData() {
                                                 <button
                                                     type="button"
                                                     name="buy-button"
+                                                    className={ stockName }
+                                                    onClick={ (target) => setNewStateForAvailableStocks(target) }
                                                 >
                                                     C
                                                 </button>
@@ -81,6 +83,9 @@ function AvailableStocksToInvestData() {
                                                 <button
                                                     type="button"
                                                     name="sell-button"
+                                                    disabled="true"
+                                                    className={ stockName }
+                                                    onClick={ (target) => setNewStateForAvailableStocks(target) }
                                                 >
                                                     V
                                                 </button>
