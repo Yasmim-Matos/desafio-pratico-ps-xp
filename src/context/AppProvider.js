@@ -18,6 +18,7 @@ function AppProvider({ children }) {
     const [lotStockValue, setLotStockValue] = useState([]);
 
     const [stockInProgress, setStockInProgress] = useState([]);
+    const [typeOfStock, setTypeOfStock] = useState(0);
 
     const contextValue = {
         userSetters: {
@@ -57,6 +58,8 @@ function AppProvider({ children }) {
 
         setStockInProgress,
         stockInProgress,
+        typeOfStock, 
+        setTypeOfStock,
     };
 
     return (
