@@ -41,6 +41,22 @@ function AppProvider({ children }) {
             userStocksBought,
             userAmountPaid,
         },
+
+        availableStocksSetters: {
+            setAvailableStockName,
+            setAvailableStocksQuantity,
+            setUnitStockValue,
+            setLotStockValue,
+        },
+        availableStocksData: {
+            availableStockName,
+            availableStocksQuantity,
+            unitStockValue,
+            lotStockValue,
+        },
+
+        setStockInProgress,
+        stockInProgress,
     };
 
     return (
