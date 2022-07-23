@@ -2,20 +2,17 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import AppContext from './AppContext';
 
+import AvailableStocksToInvest from '../utils/AvailableStocksToInvest';
+import StocksOfUser from '../utils/StocksOfUser';
+
 function AppProvider({ children }) {
     const [userEmail, setUserEmail] = useState('');
     const [userPassword, setUserPassword] = useState('');
 
     const [userBalance, setUserBalance] = useState(0);
 
-    const [userStockName, setUserStockName] = useState([]);
-    const [userStocksBought, setUserStocksBought] = useState([]);
-    const [userAmountPaid, setUserAmountPaid] = useState([]);
-
-    const [availableStockName, setAvailableStockName] = useState([]);
-    const [availableStocksQuantity, setAvailableStocksQuantity] = useState([]);
-    const [unitStockValue, setUnitStockValue] = useState([]);
-    const [lotStockValue, setLotStockValue] = useState([]);
+    const [userStocks, setUserStocks] = useState([StocksOfUser]);
+    const [availableStocks, setAvailableStocks] = useState([AvailableStocksToInvest]);
 
     const [stockInProgress, setStockInProgress] = useState([]);
     const [typeOfStock, setTypeOfStock] = useState(0);
@@ -33,31 +30,22 @@ function AppProvider({ children }) {
         },
 
         userStockSetters: {
-            setUserStockName,
-            setUserStocksBought,
-            setUserAmountPaid,
+            setUserStocks,
         },
         userStockData: {
-            userStockName,
-            userStocksBought,
-            userAmountPaid,
+            userStocks,
         },
 
         availableStocksSetters: {
-            setAvailableStockName,
-            setAvailableStocksQuantity,
-            setUnitStockValue,
-            setLotStockValue,
+            setAvailableStocks,
         },
         availableStocksData: {
-            availableStockName,
-            availableStocksQuantity,
-            unitStockValue,
-            lotStockValue,
+            availableStocks,
         },
 
         setStockInProgress,
         stockInProgress,
+
         typeOfStock, 
         setTypeOfStock,
     };

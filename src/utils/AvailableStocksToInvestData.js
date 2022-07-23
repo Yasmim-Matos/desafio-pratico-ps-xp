@@ -2,63 +2,35 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 
+import AvailableStocksToInvest from './AvailableStocksToInvest';
+
 function AvailableStocksToInvestData() {
     const {
-        availableStocksSetters: {
-            setAvailableStockName,
-            setAvailableStocksQuantity,
-            setUnitStockValue,
-            setLotStockValue,
-        },
-        availableStocksData: {
-            availableStockName,
-            availableStocksQuantity,
-            unitStockValue,
-            lotStockValue,
-        },
-
         setTypeOfStock,
         setStockInProgress,
     } = useContext(AppContext);
 
-    const availableStocksToInvest = [
-        {
-            stockName: 'XP3',
-            qtdAvailable: 1,
-            unitValue: 10,
-            lotValue: 10,
-        },
-        {
-            stockName: 'XP4',
-            qtdAvailable: 2,
-            unitValue: 50,
-            lotValue: 100,
-        },
-    ];
-
     const setNewStateForAvailableStocks = (stock) => {
         const correctStockName = stock.target.className;
-        const correctStockIndex = availableStocksToInvest.findIndex(
+        const correctStockIndex = AvailableStocksToInvest.findIndex(
             ({stockName}) => stockName === correctStockName
         );
 
-        const name = availableStocksToInvest[correctStockIndex].stockName;
-        const qtdAvailable = availableStocksToInvest[correctStockIndex].qtdAvailable;
-        const unitValue = availableStocksToInvest[correctStockIndex].unitValue;
-        const lotValue = availableStocksToInvest[correctStockIndex].lotValue;
+        const name = AvailableStocksToInvest[correctStockIndex].stockName;
+        const qtdAvailable = AvailableStocksToInvest[correctStockIndex].qtdAvailable;
+        const lotValue = AvailableStocksToInvest[correctStockIndex].lotValue;
 
-        setAvailableStockName([...availableStockName, name]);
+        /* setAvailableStockName([...availableStockName, name]);
         setAvailableStocksQuantity([...availableStocksQuantity, qtdAvailable]);
-        setUnitStockValue([...unitStockValue, unitValue]);
-        setLotStockValue([...lotStockValue, lotValue]);
+        setLotStockValue([...lotStockValue, lotValue]); */
 
-        setStockInProgress([name, qtdAvailable, unitValue, lotValue]);
+        setStockInProgress([name, qtdAvailable, lotValue]);
         setTypeOfStock(1);
     }
 
     return (
         <>
-            { availableStocksToInvest.length === 0
+            { AvailableStocksToInvest.length === 0
                     ? <p>Não existe nenhuma ação disponível para investir no momento</p> 
                     :
                     <table>
@@ -66,19 +38,17 @@ function AvailableStocksToInvestData() {
                             <tr>
                                 <th>Nome da Ação</th>
                                 <th>Quantidade</th>
-                                <th>Valor Unitário (R$)</th>
                                 <th>Valor do Lote (R$)</th>
                                 <th>Negociar</th>
                             </tr>
                         </thead>
 
                         <tbody>
-                                { availableStocksToInvest.map(({ stockName, qtdAvailable, unitValue, lotValue}) => {
+                                { AvailableStocksToInvest.map(({ stockName, qtdAvailable, lotValue}) => {
                                     return (
                                         <tr key={ stockName }>
                                             <td>{ stockName }</td>
                                             <td>{ qtdAvailable }</td>
-                                            <td>{ unitValue }</td>
                                             <td>{ lotValue }</td>
 
                                             <td>

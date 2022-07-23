@@ -2,57 +2,35 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 
+import StocksOfUser from './StocksOfUser';
+
 function UserStocksData() {
     const {
-        userStockSetters: {
-            setUserStockName,
-            setUserStocksBought,
-            setUserAmountPaid,
-        },
-        userStockData: {
-            userStockName,
-            userStocksBought,
-            userAmountPaid,
-        },
-
         setTypeOfStock,
         setStockInProgress,
     } = useContext(AppContext);
 
-    const allStocksBought = [
-        {
-            stockName: 'XP1',
-            qtdBought: 1,
-            amountPaid: 10,
-        },
-        {
-            stockName: 'XP2',
-            qtdBought: 12,
-            amountPaid: 14,
-        },
-    ];
-
     const setNewStateForStocks = (stock) => {
         const correctStockName = stock.target.className;
-        const correctStockIndex = allStocksBought.findIndex(
+        const correctStockIndex = StocksOfUser.findIndex(
             ({stockName}) => stockName === correctStockName
         );
 
-        const name = allStocksBought[correctStockIndex].stockName;
-        const qtdStock = allStocksBought[correctStockIndex].qtdBought;
-        const amountPaid = allStocksBought[correctStockIndex].amountPaid;
+        const name = StocksOfUser[correctStockIndex].stockName;
+        const qtdAvailable = StocksOfUser[correctStockIndex].qtdAvailable;
+        const lotValue = StocksOfUser[correctStockIndex].lotValue;
 
-        setUserStockName([...userStockName, name]);
-        setUserStocksBought([...userStocksBought, qtdStock]);
-        setUserAmountPaid([...userAmountPaid, amountPaid]);
+        /* setUserStockName([...userStockName, name]);
+        setUserStocksBought([...userStocksBought, qtdAvailable]);
+        setUserAmountPaid([...userAmountPaid, lotValue]); */
 
-        setStockInProgress([name, qtdStock, amountPaid]);
+        setStockInProgress([name, qtdAvailable, lotValue]);
         setTypeOfStock(2);
     }
 
     return (
         <>
-            { allStocksBought.length === 0
+            { StocksOfUser.length === 0
                     ? <p>Você não tem nenhuma ação comprada</p> 
                     :
                         <table>
@@ -66,12 +44,12 @@ function UserStocksData() {
                             </thead>
 
                             <tbody>
-                            { allStocksBought.map(({ stockName, qtdBought, amountPaid }) => {
+                            { StocksOfUser.map(({ stockName, qtdAvailable, lotValue}) => {
                                     return (
                                         <tr key={ stockName }>
                                             <td>{ stockName }</td>
-                                            <td>{ qtdBought }</td>
-                                            <td>{ amountPaid }</td>
+                                            <td>{ qtdAvailable }</td>
+                                            <td>{ lotValue }</td>
 
                                             <td>
                                                 <Link to="/buyandsell">
