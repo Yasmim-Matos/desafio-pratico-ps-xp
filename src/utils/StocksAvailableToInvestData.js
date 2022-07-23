@@ -1,10 +1,18 @@
-const StocksAvailableData = [
-    {
-        stockName: 'XP1',
-        qtdAvailable: 1,
-        unitValue: 10,
-        lotValue: 10,
-    },
-];
+function StocksAvailableToInvestData() {
+    const stocksAvailableToInvest = [
+        {
+            stockName: 'XP3',
+            qtdAvailable: 1,
+            unitValue: 10,
+            lotValue: 10,
+        },
+        {
+            stockName: 'XP4',
+            qtdAvailable: 2,
+            unitValue: 50,
+            lotValue: 100,
+        },
+    ];
+}
 
-export default StocksAvailableData;
+export default StocksAvailableToInvestData;
