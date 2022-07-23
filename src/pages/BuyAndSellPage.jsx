@@ -1,13 +1,33 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import AppContext from '../context/AppContext';
 
 function BuyAndSellPage() {
+    const [inputValue, setNewValue] = useState(0);
+
     const {
+        userData: {
+            userBalance,
+        },
+        userSetters: {
+            setUserBalance,
+        },
+
         typeOfStock,
         stockInProgress,
     } = useContext(AppContext);
+
+
+
+    const confirmPurchaseOfStock = () => {
+        const iptValue = Number(inputValue);
+        const balance =  Number(userBalance);
+        const paidValue = Number(stockInProgress[2]);
+        console.log('stp2', typeof stockInProgress[2], stockInProgress[2]);
+
+        if (balance <= 0 || balance < iptValue || balance < paidValue) return alert('Saldo Insuficiente');
+    }
 
     return (
         <main className="buy-and-sell-container">
@@ -56,11 +76,16 @@ function BuyAndSellPage() {
             <button
                 type="button"
                 name="buy-button"
+                onClick={ confirmPurchaseOfStock }
             >
                 Comprar
             </button>
 
-            <input type="number" />
+            <input
+                type="number"
+                placeholder="Informe o valor"
+                onChange={ ({ target: { value } }) => setNewValue(value) }
+            />
 
             <button
                 type="button"
