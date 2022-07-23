@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import AppContext from '../context/AppContext';
 import Header from '../components/Header';
 
 function DepositAndWithdrawalPage() {
+    const [value, setNewValue] = useState(0);
     const {
         userData: {
             userBalance,
@@ -20,7 +21,7 @@ function DepositAndWithdrawalPage() {
                 <span className="balance">{ userBalance }</span>
             </p>
 
-            <input type="number" />
+            <input type="number" value={ value }/>
 
 
             <button
