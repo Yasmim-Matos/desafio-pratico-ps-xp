@@ -13,7 +13,15 @@ function DepositAndWithdrawalPage() {
         },
     } = useContext(AppContext);
 
+    const increaseBalance = () => {
+        const value = Number(inputValue);
+        const balance =  Number(userBalance);
 
+        const totalBalance = balance + value;
+
+        setUserBalance(totalBalance);
+        return alert('Dinheiro Depositado com Sucesso');
+    }
 
     const decreaseBalance = () => {
         const value = Number(inputValue);
@@ -48,6 +56,7 @@ function DepositAndWithdrawalPage() {
 
             <button
                 type="button"
+                onClick={ increaseBalance }
             >
                 Depósito
             </button>
