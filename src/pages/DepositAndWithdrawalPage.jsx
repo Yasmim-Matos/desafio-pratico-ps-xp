@@ -1,9 +1,12 @@
 import React, { useContext, useState } from 'react';
+import { useHistory } from "react-router-dom";
 import AppContext from '../context/AppContext';
 import Header from '../components/Header';
 
 function DepositAndWithdrawalPage() {
     const [inputValue, setNewValue] = useState(0);
+    const history = useHistory();
+
     const {
         userData: {
             userBalance,
@@ -50,6 +53,7 @@ function DepositAndWithdrawalPage() {
 
             <input
                 type="number"
+                placeholder="Informe o valor"
                 onChange={ ({ target: { value } }) => setNewValue(value) }
             />
 
@@ -66,6 +70,13 @@ function DepositAndWithdrawalPage() {
                 onClick={ decreaseBalance }
             >
                 Retirada
+            </button>
+
+            <button
+                type="button"
+                onClick={ () => history.goBack() }
+            >
+                Voltar
             </button>
         </main>
     );
