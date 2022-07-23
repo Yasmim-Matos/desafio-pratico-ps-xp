@@ -12,7 +12,12 @@ function AppProvider({ children }) {
     const [userStocksBought, setUserStocksBought] = useState([]);
     const [userAmountPaid, setUserAmountPaid] = useState([]);
 
-    /* const [stockInProgress, setStockInProgress] = useState([]); */
+    const [availableStockName, setAvailableStockName] = useState([]);
+    const [availableStocksQuantity, setAvailableStocksQuantity] = useState([]);
+    const [unitStockValue, setUnitStockValue] = useState([]);
+    const [lotStockValue, setLotStockValue] = useState([]);
+
+    const [stockInProgress, setStockInProgress] = useState([]);
 
     const contextValue = {
         userSetters: {
@@ -36,6 +41,22 @@ function AppProvider({ children }) {
             userStocksBought,
             userAmountPaid,
         },
+
+        availableStocksSetters: {
+            setAvailableStockName,
+            setAvailableStocksQuantity,
+            setUnitStockValue,
+            setLotStockValue,
+        },
+        availableStocksData: {
+            availableStockName,
+            availableStocksQuantity,
+            unitStockValue,
+            lotStockValue,
+        },
+
+        setStockInProgress,
+        stockInProgress,
     };
 
     return (
