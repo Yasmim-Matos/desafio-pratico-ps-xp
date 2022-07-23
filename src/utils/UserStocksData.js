@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 
 function UserStocksData() {
@@ -61,23 +62,27 @@ function UserStocksData() {
                                             <td>{ amountPaid }</td>
 
                                             <td>
-                                                <button
-                                                    type="button"
-                                                    name="buy-button"
-                                                    className={ stockName }
-                                                    onClick={ (target) => setNewStateForStocks(target) }
-                                                >
-                                                    C
-                                                </button>
+                                                <Link to="/buyandsell">
+                                                    <button
+                                                        type="button"
+                                                        name="buy-button"
+                                                        className={ stockName }
+                                                        onClick={ (target) => setNewStateForStocks(target) }
+                                                    >
+                                                        C
+                                                    </button>
+                                                </Link>
 
-                                                <button
-                                                    type="button"
-                                                    name="sell-button"
-                                                    className={ stockName }
-                                                    onClick={ (target) => setNewStateForStocks(target) }
-                                                >
-                                                    V
-                                                </button>
+                                                <Link to="/buyandsell">
+                                                    <button
+                                                        type="button"
+                                                        name="sell-button"
+                                                        className={ stockName }
+                                                        onClick={ (target) => setNewStateForStocks(target) }
+                                                    >
+                                                        V
+                                                    </button>
+                                                </Link>
                                             </td>
                                         </tr>
                                         );
