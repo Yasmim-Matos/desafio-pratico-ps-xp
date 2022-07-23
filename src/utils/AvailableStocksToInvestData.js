@@ -1,6 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AppContext from '../context/AppContext';
 
 function AvailableStocksToInvestData() {
+    const {
+        availableStocksSetters: {
+            setAvailableStockName,
+            setAvailableStocksQuantity,
+            setUnitStockValue,
+            setLotStockValue,
+        },
+        availableStocksData: {
+            availableStockName,
+            availableStocksQuantity,
+            unitStockValue,
+            lotStockValue,
+        },
+
+        setStockInProgress,
+        stockInProgress,
+    } = useContext(AppContext);
+
+
     const availableStocksToInvest = [
         {
             stockName: 'XP3',
@@ -40,18 +60,20 @@ function AvailableStocksToInvestData() {
                                             <td>{ qtdAvailable }</td>
                                             <td>{ unitValue }</td>
                                             <td>{ lotValue }</td>
+
                                             <td>
                                                 <button
-                                                type="button"
-                                                name="buy-button"
+                                                    type="button"
+                                                    name="buy-button"
                                                 >
-                                                C
+                                                    C
                                                 </button>
+
                                                 <button
-                                                type="button"
-                                                name="sell-button"
+                                                    type="button"
+                                                    name="sell-button"
                                                 >
-                                                V
+                                                    V
                                                 </button>
                                             </td>
                                         </tr>
