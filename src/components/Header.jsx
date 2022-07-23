@@ -8,9 +8,9 @@ function Header() {
             userEmail,
             userBalance,
         },
-        /* userStockData: {
-            userStocksBought,
-        }, */
+        userStockData: {
+            userStocks,
+        },
     } = useContext(AppContext);
 
     return (
@@ -21,11 +21,11 @@ function Header() {
                 <span className="balance">{ userBalance }</span>
             </p>
 
-            {/* <p>
+            <p>
                 Total de ações:
                 {' '}
-                <span className="stocks">{ userStocksBought }</span>
-            </p> */}
+                <span className="stocks">{ userStocks[1] }</span>
+            </p>
 
             <p>
                 Olá,
