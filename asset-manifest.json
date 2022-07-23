@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/desafio-pratico-ps-xp/static/css/main.073c9b0a.css",
-    "main.js": "/desafio-pratico-ps-xp/static/js/main.08c00d48.js",
+    "main.css": "/desafio-pratico-ps-xp/static/css/main.63e9e5f6.css",
+    "main.js": "/desafio-pratico-ps-xp/static/js/main.f756a791.js",
     "static/js/787.bfb0fef3.chunk.js": "/desafio-pratico-ps-xp/static/js/787.bfb0fef3.chunk.js",
-    "static/media/logo.svg": "/desafio-pratico-ps-xp/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/desafio-pratico-ps-xp/index.html",
-    "main.073c9b0a.css.map": "/desafio-pratico-ps-xp/static/css/main.073c9b0a.css.map",
-    "main.08c00d48.js.map": "/desafio-pratico-ps-xp/static/js/main.08c00d48.js.map",
+    "main.63e9e5f6.css.map": "/desafio-pratico-ps-xp/static/css/main.63e9e5f6.css.map",
+    "main.f756a791.js.map": "/desafio-pratico-ps-xp/static/js/main.f756a791.js.map",
     "787.bfb0fef3.chunk.js.map": "/desafio-pratico-ps-xp/static/js/787.bfb0fef3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.08c00d48.js"
+    "static/css/main.63e9e5f6.css",
+    "static/js/main.f756a791.js"
   ]
 }
