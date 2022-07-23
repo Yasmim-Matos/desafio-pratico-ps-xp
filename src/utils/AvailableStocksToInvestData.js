@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 
 function AvailableStocksToInvestData() {
@@ -15,6 +16,9 @@ function AvailableStocksToInvestData() {
             unitStockValue,
             lotStockValue,
         },
+
+        setTypeOfStock,
+        setStockInProgress,
     } = useContext(AppContext);
 
     const availableStocksToInvest = [
@@ -34,12 +38,22 @@ function AvailableStocksToInvestData() {
 
     const setNewStateForAvailableStocks = (stock) => {
         const correctStockName = stock.target.className;
-        const correctStockIndex = availableStocksToInvest.findIndex(({stockName}) => stockName === correctStockName);
+        const correctStockIndex = availableStocksToInvest.findIndex(
+            ({stockName}) => stockName === correctStockName
+        );
 
-        setAvailableStockName([...availableStockName, availableStocksToInvest[correctStockIndex].stockName]);
-        setAvailableStocksQuantity([...availableStocksQuantity, availableStocksToInvest[correctStockIndex].qtdAvailable]);
-        setUnitStockValue([...unitStockValue, availableStocksToInvest[correctStockIndex].unitValue]);
-        setLotStockValue([...lotStockValue, availableStocksToInvest[correctStockIndex].lotValue]);
+        const name = availableStocksToInvest[correctStockIndex].stockName;
+        const qtdAvailable = availableStocksToInvest[correctStockIndex].qtdAvailable;
+        const unitValue = availableStocksToInvest[correctStockIndex].unitValue;
+        const lotValue = availableStocksToInvest[correctStockIndex].lotValue;
+
+        setAvailableStockName([...availableStockName, name]);
+        setAvailableStocksQuantity([...availableStocksQuantity, qtdAvailable]);
+        setUnitStockValue([...unitStockValue, unitValue]);
+        setLotStockValue([...lotStockValue, lotValue]);
+
+        setStockInProgress([name, qtdAvailable, unitValue, lotValue]);
+        setTypeOfStock(1);
     }
 
     return (
@@ -68,6 +82,7 @@ function AvailableStocksToInvestData() {
                                             <td>{ lotValue }</td>
 
                                             <td>
+                                                <Link to="/buyandsell">
                                                 <button
                                                     type="button"
                                                     name="buy-button"
@@ -76,6 +91,7 @@ function AvailableStocksToInvestData() {
                                                 >
                                                     C
                                                 </button>
+                                                </Link>
 
                                                 <button
                                                     type="button"

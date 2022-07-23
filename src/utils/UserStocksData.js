@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 
 function UserStocksData() {
@@ -13,16 +14,19 @@ function UserStocksData() {
             userStocksBought,
             userAmountPaid,
         },
+
+        setTypeOfStock,
+        setStockInProgress,
     } = useContext(AppContext);
 
     const allStocksBought = [
         {
-            stockName: 'XP',
+            stockName: 'XP1',
             qtdBought: 1,
             amountPaid: 10,
         },
         {
-            stockName: 'XP1',
+            stockName: 'XP2',
             qtdBought: 12,
             amountPaid: 14,
         },
@@ -30,11 +34,20 @@ function UserStocksData() {
 
     const setNewStateForStocks = (stock) => {
         const correctStockName = stock.target.className;
-        const correctStockIndex = allStocksBought.findIndex(({stockName}) => stockName === correctStockName);
+        const correctStockIndex = allStocksBought.findIndex(
+            ({stockName}) => stockName === correctStockName
+        );
 
-        setUserStockName([...userStockName, allStocksBought[correctStockIndex].stockName]);
-        setUserStocksBought([...userStocksBought, allStocksBought[correctStockIndex].qtdBought]);
-        setUserAmountPaid([...userAmountPaid, allStocksBought[correctStockIndex].amountPaid]);
+        const name = allStocksBought[correctStockIndex].stockName;
+        const qtdStock = allStocksBought[correctStockIndex].qtdBought;
+        const amountPaid = allStocksBought[correctStockIndex].amountPaid;
+
+        setUserStockName([...userStockName, name]);
+        setUserStocksBought([...userStocksBought, qtdStock]);
+        setUserAmountPaid([...userAmountPaid, amountPaid]);
+
+        setStockInProgress([name, qtdStock, amountPaid]);
+        setTypeOfStock(2);
     }
 
     return (
@@ -61,23 +74,27 @@ function UserStocksData() {
                                             <td>{ amountPaid }</td>
 
                                             <td>
-                                                <button
-                                                    type="button"
-                                                    name="buy-button"
-                                                    className={ stockName }
-                                                    onClick={ (target) => setNewStateForStocks(target) }
-                                                >
-                                                    C
-                                                </button>
+                                                <Link to="/buyandsell">
+                                                    <button
+                                                        type="button"
+                                                        name="buy-button"
+                                                        className={ stockName }
+                                                        onClick={ (target) => setNewStateForStocks(target) }
+                                                    >
+                                                        C
+                                                    </button>
+                                                </Link>
 
-                                                <button
-                                                    type="button"
-                                                    name="sell-button"
-                                                    className={ stockName }
-                                                    onClick={ (target) => setNewStateForStocks(target) }
-                                                >
-                                                    V
-                                                </button>
+                                                <Link to="/buyandsell">
+                                                    <button
+                                                        type="button"
+                                                        name="sell-button"
+                                                        className={ stockName }
+                                                        onClick={ (target) => setNewStateForStocks(target) }
+                                                    >
+                                                        V
+                                                    </button>
+                                                </Link>
                                             </td>
                                         </tr>
                                         );
