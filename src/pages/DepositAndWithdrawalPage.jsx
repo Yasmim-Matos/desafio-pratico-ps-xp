@@ -25,7 +25,7 @@ function DepositAndWithdrawalPage() {
 
     const decreaseBalance = () => {
         const value = Number(inputValue);
-        const balance =  userBalance;
+        const balance =  Number(userBalance);
 
         if (balance <= 0 || balance < value) return alert('Saldo Insuficiente');
 
@@ -43,7 +43,7 @@ function DepositAndWithdrawalPage() {
             <h1>Deposit And Withdrawal</h1>
 
             <p>
-                Saldo em Conta:
+                Saldo em Conta: R$
                 {' '}
                 <span className="balance">{ userBalance }</span>
             </p>
