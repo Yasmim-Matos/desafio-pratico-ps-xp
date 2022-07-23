@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import AppContext from '../context/AppContext';
 
@@ -71,26 +72,32 @@ function BuyAndSellPage() {
 
             <input type="number" />
 
-            <button
-                type="button"
-            >
-                Voltar
-            </button>
+            <Link to="/stocklist">
+                <button
+                    type="button"
+                >
+                    Voltar
+                </button>
+            </Link>
+
+            <Link to="/depositandwithdrawal">
+                <button
+                    type="button"
+                >
+                    Confirmar
+                </button>
+            </Link>
 
             <button
                 type="button"
-            >
-                Confirmar
-            </button>
-
-            <button
-                type="button"
+                disabled={ true }
             >
                 Depósito
             </button>
 
             <button
                 type="button"
+                disabled={ true }
             >
                 Retirada
             </button>
