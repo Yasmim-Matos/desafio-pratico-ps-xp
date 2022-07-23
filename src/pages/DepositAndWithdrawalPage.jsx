@@ -19,6 +19,9 @@ function DepositAndWithdrawalPage() {
     const increaseBalance = () => {
         const value = Number(inputValue);
         const balance =  Number(userBalance);
+        console.log(value);
+
+        if (value === 0) return alert('Nenhum Valor foi Informado');
 
         const totalBalance = balance + value;
 
@@ -30,6 +33,8 @@ function DepositAndWithdrawalPage() {
         const value = Number(inputValue);
         const balance =  Number(userBalance);
 
+        if (value === 0) return alert('Nenhum Valor foi Informado');
+        
         if (balance <= 0 || balance < value) return alert('Saldo Insuficiente');
 
         if (balance > 0) { 
