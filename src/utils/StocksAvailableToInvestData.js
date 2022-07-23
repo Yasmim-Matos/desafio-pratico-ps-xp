@@ -1,5 +1,5 @@
-function StocksAvailableToInvestData() {
-    const stocksAvailableToInvest = [
+function AvailableStocksToInvestData() {
+    const availableStocksToInvest = [
         {
             stockName: 'XP3',
             qtdAvailable: 1,
@@ -15,4 +15,4 @@ function StocksAvailableToInvestData() {
     ];
 }
 
-export default StocksAvailableToInvestData;
+export default AvailableStocksToInvestData;
