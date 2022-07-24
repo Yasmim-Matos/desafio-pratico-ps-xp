@@ -48,7 +48,7 @@ Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido 
 <details>
   <summary markdown="span"><strong>:hammer_and_wrench: Principais Ferramentas</strong></summary><br />
  
-* React
+* React.js
 * JavaScript
 * CSS
 * HTML
@@ -62,7 +62,7 @@ Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido 
 <details>
   <summary markdown="span"><strong>:jigsaw: Descrição das decisões</strong></summary><br />
 
-- Decidi usar React.js, React Router (na versão 5), JavaScript, CSS e HTML para desenvolver as 4 telas (Tela de Login, Tela de Depósito e Saque, Tela que Lista as ações e Tela de compra e venda de ações). Escolhi esta versão do React Router e estas tecnologias por conta de estar mais familiarizada com elas e ter mais facilidade de enteder a documentação.
+- Decidi usar React.js, React Router (na versão 5), JavaScript, CSS e HTML para desenvolver as 4 telas (Tela de Login, Tela de Depósito e Saque, Tela que Lista as ações e Tela de compra e venda de ações). Escolhi esta versão do React Router e estas tecnologias por conta do tempo de entrega do desafio, por estar mais familiarizada com elas e por conta disso ter mais facilidade de enteder a documentação.
     
 - Apliquei Context API e Hooks nas telas para poder manipular os estados da aplicação, e poder mostrar no componente 'Header' da aplicação o nome do usuário e o seu saldo. Escolhi Context API e Hooks pois não queria deixar o código tão verboso (tornando difícil de ler) e com muitos arquivos para gerenciar a aplicação que continha poucos estados e poucas telas para gerenciar.
 
@@ -73,6 +73,18 @@ Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido 
 </details>
 
 <details>
-  <summary markdown="span"><strong>:exploding_head: Principais pontos de dificuldade</strong></summary><br />
+  <summary markdown="span"><strong>:exploding_head: Principais dificuldades e aprendizados</strong></summary><br />
+
+- Nesse desafio, apesar de ter escolhido ferramentas que eu tivesse mais familiaridade, isso não diminuiu as dificuldades que tive para desenvolver algumas soluções. A primeira dificuldade foi entender qual era o meu nível de aprendizado até aqui nas tecnologias que eu iria utilizar no projeto pra poder iniciar a aplicação, mas assim que o desafio foi iniciado percebi que consegui superar essa dificuldade buscando os conhecimentos necessários e fazendo pesquisas na internet, e fui construindo a aplicação com muita empolgação e vontade de ver aquilo funcionar e dar certo.
+
+- A manipulação dos estados no componente 'Header' foi difícil pra mim no início, pois foi o primeiro componente que tive que usar os estados para fazer as informações aparecerem na tela. Busquei então vídeos e artigos na internet e consegui fazer com que os estados aparecessem da maneira correta.
+
+- As funções de acréscimo e decréscimo no saldo do usuário me deixaram bastante aflita, pois num primeiro momento achei que seriam bastante simples de fazer, até que percebi que além de manipular o estado do saldo eu precisaria fazer alguns tratamentos condicionais, como por exemplo: o usuário não pode fazer a retirada de dinheiro quando o saldo está zerado. Mas apesar da aflição, consegui pensar em condições reais e consegui colocar em prática a manipulação do estado, e isso me deixou muito confiante, realizada e feliz com o meu desempenho. Pois por mais que esse seja um desafio técnico, o fato de eu conseguir concluir a linha de raciocínio e fazer as funções funcionarem, isso mostrou que o meu nível de conhecimento, que eu no início fiquei preocupada, ele estava muito bom e isso me deu confiaça de que eu conseguiria dar conta de fazer as outras funções que precisassem ser feitas.
+
+- O ponto de maior dificuldade que eu consegui superar nesse desafio esteve relacionado as funções de compra e venda de ações. O fato de ter que manipular dados que vinham de diferentes estados e tabelas diferentes foi a primeira dificuldade que encontrei. Primeiro refatorei os estados que vinham do 'AppProvider', pois não eram necessários todos aqueles que eu havia criado anteriormente. Depois refatorei as tabelas que eu tinha criado para receber as ações, tanto as que ficavam disponíveis para o usuário quanto as que pertenciam a ele. Depois refatorei os arrays de dados que criei para fornecer as informações para as tabelas. E com as refatorações do código, eu fui conseguindo entender o que era preciso fazer, pois o código foi ficando mais claro, até que na página de compra e venda de ações eu consegui criar as funções de compra e venda, e este foi o meu ponto auge do desafio de aprendizado. Pois aprendi a ter mais resiliência, para continuar até ver o problema resolvido, aprendi a aprender rápido com os erros que cometi nos códigos que já havia escrito e aprendi a buscar conhecimento em fontes diferentes para chegar ao resultado esperado.
+
+- Desenvolver esse desafio foi muito, muito divertido (apesar do nervosismo) e serviu como um "termômetro" de conhecimento pra mim. Tecnologias que eu achava que não tinha muita capacidade para desenvolver e lógicas que eu achava que não iria concluir, eu percebi que mesmo com essa baixa confiança eu fui lá e fiz, e quando chegava no resultado esperado eu ficava muito feliz e me surpreendia com a entrega. 
+
+- A parte de validação do usuário e senha e armazenar alguns dados do usuário no local storage foram muito legais, consegui fazer as funções funcionarem, e a parte de maior dificuldade foi entender como armazenar no local storage a data e hora de acesso, então fui na documentação e consegui encontrar o dado e deu muito certo! Além disso, consegui "extrair" o nome do usuário do email dele, armazenei email e nome em chaves separadas no local storage, e então consegui pegar o nome do usuário no local storage e coloquei no 'Header' de todas as páginas, para que não ficasse o email inteiro aparecendo mas sim apenas o nome.
 
 </details>
