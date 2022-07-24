@@ -53,7 +53,7 @@ function DepositAndWithdrawalPage() {
 
             <section className="deposit-withdrawal-container">
 
-                <h1>Deposit And Withdrawal</h1>
+                <h1>Depósito e Retirada</h1>
 
                 <p>
                     Saldo em Conta: R$

@@ -2,14 +2,32 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin: 200px;
+    margin: 150px;
 }
 
-.login-inputs {
+.login-components {
+    border: solid 2px black;
+    border-radius: 3px;
+    padding: 70px 40px;
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#first-login-input, #second-login-input {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.login-container h1 {
+    text-align: center;
+    border-bottom: 2px black solid;
+    padding: 15px;
+    margin-bottom: 45px;
+    font-size: 35px;
+    width: 150px;
 }
 
 .login-inputs input {
@@ -17,7 +35,7 @@
     border: none;
     border-bottom: 1.5px solid black;
     border-radius: 3px;
-    margin: 5px;
+    margin: 10px;
     padding: 5px;
 }
 
@@ -31,7 +49,8 @@
     border: 0;
     border-radius: 2px;
     color: rgb(0, 0, 0);
-    padding: 8px 68px;
+    padding: 8px 85px;
+    margin: 15px 15px;
 }
 
 .login-container button:hover {

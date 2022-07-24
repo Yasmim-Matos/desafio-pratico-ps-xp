@@ -13,7 +13,7 @@ function StockListPage() {
             <Header />
 
             <section className="stock-list-container">
-                <h1>Stock List</h1>
+                <h1>Lista de Ações</h1>
 
                 <div className="user-stocks-container">
                     <h3>Minhas ações</h3>
