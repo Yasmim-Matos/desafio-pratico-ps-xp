@@ -51,6 +51,7 @@
     color: rgb(0, 0, 0);
     padding: 8px 85px;
     margin: 15px 15px;
+    font-weight: bold;
 }
 
 .login-container button:hover {

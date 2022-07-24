@@ -63,7 +63,7 @@ function DepositAndWithdrawalPage() {
 
                 <input
                     type="number"
-                    placeholder="Informe o valor"
+                    placeholder="Informe o Valor"
                     onChange={ ({ target: { value } }) => setNewValue(value) }
                 />
 
