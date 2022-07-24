@@ -62,6 +62,11 @@ function BuyAndSellPage() {
         }
     }
 
+    const sellStock = () => {
+        
+        }
+    }
+
     return (
         <main className="buy-and-sell-container">
             <Header />
@@ -114,18 +119,23 @@ function BuyAndSellPage() {
 
             <input
                 type="number"
-                placeholder="Informe o valor"
+                placeholder="Informe o valor para Compra"
                 onChange={ ({ target: { value } }) => setNewValue(value) }
             />
 
             <button
                 type="button"
                 name="sell-button"
+                onClick={ sellStock }
             >
                 Vender
             </button>
 
-            <input type="number" placeholder="Informe o Valor" />
+            <input
+            type="number"
+            placeholder="Informe o Valor para Venda"
+            onChange={ ({ target: { value } }) => setNewValue(value) }
+            />
 
             <Link to="/stocklist">
                 <button
