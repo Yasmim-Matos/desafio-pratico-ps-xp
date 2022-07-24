@@ -19,9 +19,15 @@
     color: rgb(0, 0, 0);
     padding: 5px 12px;
     margin: 2px;
+    font-weight: bold;
 }
 
 .stock-list-container button:hover {
     background-color: rgba(255, 196, 1, 0.707);
     transition: 0.25s;
+}
+
+#dep-withdrawal-button{
+    padding: 8px 85px;
+    margin: 15px 15px;
 }
