@@ -2,6 +2,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import AppContext from '../context/AppContext';
 import { Link } from 'react-router-dom';
 
+import { saveInStorage } from '../utils/localStorage';
+
 import '../styles/LoginPage.css';
 
 function LoginPage() {
@@ -16,9 +18,26 @@ function LoginPage() {
         },
     } = useContext(AppContext);
 
-    const setNewState = () => {
+    const setNewStateAndSaveUserDataOnStorage = () => {
+        /* Source: https://bobbyhadz.com/blog/javascript-get-name-from-email-address#:~:text=To%20extract%20the%20name%20from,%40')%5B0%5D%20. */
+        const userEmail = email.split('@')[0];
+        /* Source: https://flexiple.com/javascript-capitalize-first-letter/ */
+        const userEmailWithUpperLetter = userEmail.charAt(0).toUpperCase() + userEmail.slice(1);
+
+        const dateAccess = new Date();
+        const hourAccess = new Date().getHours();
+        const minuteAccess = new Date().getMinutes();
+        const secondAccess = new Date().getSeconds();
+
         setUserEmail(email);
         setUserPassword(password);
+
+        saveInStorage('userName', userEmailWithUpperLetter);
+        saveInStorage('userEmail', email);
+        saveInStorage('dateAccess', dateAccess);
+        saveInStorage('hourAccess', hourAccess);
+        saveInStorage('minuteAccess', minuteAccess);
+        saveInStorage('secondAccess', secondAccess);
     }
 
     useEffect(() => {
@@ -71,7 +90,7 @@ function LoginPage() {
                         type="button"
                         name="login-button"
                         disabled={ isDisabled }
-                        onClick={ setNewState }
+                        onClick={ setNewStateAndSaveUserDataOnStorage }
                     >
                         Acessar
                     </button>
