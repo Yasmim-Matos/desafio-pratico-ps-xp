@@ -41,6 +41,7 @@
     color: rgb(0, 0, 0);
     padding: 5px 12px;
     margin: 10px 5px;
+    font-weight: bold;
 }
 
 .buy-and-sell-container button:hover {
