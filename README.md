@@ -89,3 +89,14 @@ Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido 
 - A parte de validação do usuário e senha e armazenar alguns dados do usuário no local storage foram muito legais, consegui fazer as funções funcionarem, e a parte de maior dificuldade foi entender como armazenar no local storage a data e hora de acesso, então fui na documentação e consegui encontrar o dado e deu muito certo! Além disso, consegui "extrair" o nome do usuário do email dele, armazenei email e nome em chaves separadas no local storage, e então consegui pegar o nome do usuário no local storage e coloquei no 'Header' de todas as páginas, para que não ficasse o email inteiro aparecendo mas sim apenas o nome.
 
 </details>
+
+## :desktop_computer: Capturas das telas do projeto
+<details>
+  <summary markdown="span"><strong> Telas do projeto</strong></summary><br />
+
+![Tela Login](./images/tela-1-login.png)
+![Tela Lista de Ações](./images/tela-2-lista-de-acoes.png)
+![Tela Compra e Venda de Ações](./images/tela-3-compra-venda.png)
+![Tela Depósito e Retirada](./images/tela-4-deposito-retirada.png)
+
+</details>
