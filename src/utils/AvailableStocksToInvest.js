@@ -2,23 +2,23 @@ const AvailableStocksToInvest = [
     {
         stockName: 'XP1',
         qtdAvailable: 1,
-        lotValue: 10,
+        lotValue: 100,
     },
     {
         stockName: 'XP2',
-        qtdAvailable: 12,
-        lotValue: 14,
+        qtdAvailable: 2,
+        lotValue: 200,
     },
 
     {
         stockName: 'XP3',
-        qtdAvailable: 1,
-        lotValue: 10,
+        qtdAvailable: 3,
+        lotValue: 300,
     },
     {
         stockName: 'XP4',
-        qtdAvailable: 2,
-        lotValue: 100,
+        qtdAvailable: 4,
+        lotValue: 400,
     },
 ];
 
