@@ -7,6 +7,9 @@ import AppContext from '../context/AppContext';
 import UserStocksData from '../utils/UserStocksData';
 import AvailableStocksToInvestData from '../utils/AvailableStocksToInvestData';
 
+import '../styles/BuyAndSellPage.css';
+import '../styles/StyleForTables.css';
+
 function BuyAndSellPage() {
     const [inputValue, setNewValue] = useState(0);
 
@@ -96,96 +99,98 @@ function BuyAndSellPage() {
     }
 
     return (
-        <main className="buy-and-sell-container">
+        <main>
             <Header />
-            <h1>Buy And Sell</h1>
 
-            { typeOfStock === 1
-                ? 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nome da Ação</th>
-                            <th>Quantidade</th>
-                            <th>Valor do Lote (R$)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                            <tr key={ stockInProgress[0] }>
-                                <td>{ stockInProgress[0] }</td>
-                                <td>{ stockInProgress[1] }</td>
-                                <td>{ stockInProgress[2] }</td>
-                            </tr>
-                    </tbody>
-                </table>
-                :
-                <table>
+            <section className="buy-and-sell-container">
+
+                <h1>Buy And Sell</h1>
+
+                { typeOfStock === 1
+                    ? 
+                    <table className="styled-table">
                         <thead>
                             <tr>
-                            <th>Nome da Ação</th>
-                            <th>Quantidade</th>
-                            <th>Valor Pago (R$)</th>
+                                <th>Nome da Ação</th>
+                                <th>Quantidade</th>
+                                <th>Valor do Lote (R$)</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr key={ stockInProgress[0] }>
-                                <td>{ stockInProgress[0] }</td>
-                                <td>{ stockInProgress[1] }</td>
-                                <td>{ stockInProgress[2] }</td>
-                            </tr>
+                                <tr key={ stockInProgress[0] }>
+                                    <td>{ stockInProgress[0] }</td>
+                                    <td>{ stockInProgress[1] }</td>
+                                    <td>{ stockInProgress[2] }</td>
+                                </tr>
                         </tbody>
-                </table>
-            }
-            
-            <button
-                type="button"
-                name="buy-button"
-                onClick={ buyStock }
-            >
-                Comprar
-            </button>
+                    </table>
+                    :
+                    <table>
+                            <thead>
+                                <tr>
+                                <th>Nome da Ação</th>
+                                <th>Quantidade</th>
+                                <th>Valor Pago (R$)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr key={ stockInProgress[0] }>
+                                    <td>{ stockInProgress[0] }</td>
+                                    <td>{ stockInProgress[1] }</td>
+                                    <td>{ stockInProgress[2] }</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                }
+                
+                <div className="principal-buttons-inputs-buy-sell">
+                    <button
+                        type="button"
+                        name="buy-button"
+                        onClick={ buyStock }
+                    >
+                        Comprar
+                    </button>
 
-            <input
-                type="number"
-                placeholder="Informe o valor para Compra"
-                onChange={ ({ target: { value } }) => setNewValue(value) }
-            />
+                    <input
+                        type="number"
+                        placeholder="Informe o Valor da Compra"
+                        onChange={ ({ target: { value } }) => setNewValue(value) }
+                    />
 
-            <button
-                type="button"
-                name="sell-button"
-                onClick={ sellStock }
-            >
-                Vender
-            </button>
+                    <button
+                        type="button"
+                        name="sell-button"
+                        onClick={ sellStock }
+                    >
+                        Vender
+                    </button>
 
-            <input
-            type="number"
-            placeholder="Informe o Valor para Venda"
-            onChange={ ({ target: { value } }) => setNewValue(value) }
-            />
+                    <input
+                    type="number"
+                    placeholder="Informe o Valor da Venda"
+                    onChange={ ({ target: { value } }) => setNewValue(value) }
+                    />
+                </div>
 
-            <Link to="/stocklist">
-                <button
-                    type="button"
-                >
-                    Voltar
-                </button>
-            </Link>
+                <div className="buy-and-sell-redirect-buttons">
+                    <Link to="/stocklist">
+                        <button
+                            type="button"
+                        >
+                            Voltar
+                        </button>
+                    </Link>
 
-            <button
-                type="button"
-            >
-                Confirmar
-            </button>
-
-            <Link to="/depositandwithdrawal">
-                <button
-                    type="button"
-                >
-                    Depósito/Retirada
-                </button>
-            </Link>
+                    <Link to="/depositandwithdrawal">
+                        <button
+                            type="button"
+                        >
+                            Depósito/Retirada
+                        </button>
+                    </Link>
+                </div>
+            </section>
         </main>
     );
 }
