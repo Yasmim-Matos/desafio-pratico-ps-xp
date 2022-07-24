@@ -19,7 +19,6 @@ function DepositAndWithdrawalPage() {
     const increaseBalance = () => {
         const value = Number(inputValue);
         const balance =  Number(userBalance);
-        console.log(value);
 
         if (value === 0) return alert('Nenhum Valor foi Informado');
 

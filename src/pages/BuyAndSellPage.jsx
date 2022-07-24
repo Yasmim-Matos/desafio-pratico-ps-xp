@@ -43,9 +43,11 @@ function BuyAndSellPage() {
 
         if (iptValue === 0) return alert('Nenhum Valor foi Informado');
 
-        if (balance <= 0 || balance < paidValue) return alert('Saldo Insuficiente');
+        if (balance <= 0) return alert('Saldo Insuficiente');
 
-        if (balance > iptValue || iptValue <= paidValue) {
+        if (iptValue < paidValue) return alert('O valor digitado não é o mesmo que o valor do lote');
+
+        if (balance >= iptValue && iptValue === paidValue) {
             const correctStockIndex = AvailableStocksToInvest.findIndex(
                 ({stockName}) => stockName === stock
             );
@@ -59,6 +61,35 @@ function BuyAndSellPage() {
             setUserStocks([...userStocks, addingStock]);
             setStockInProgress([]);
             return alert('Compra efetuada com sucesso');
+        }
+    }
+
+    const sellStock = () => {
+        const iptValue = Number(inputValue);
+        const balance =  Number(userBalance);
+        const paidValue = Number(stockInProgress[2]);
+        const stock = stockInProgress[0];
+
+        if (iptValue === 0) return alert('Nenhum Valor foi Informado');
+
+        if (iptValue < paidValue) return alert('O valor que foi pago pela ação precisa ser o mesmo que o digitado');
+
+        if (iptValue === paidValue) {
+            const correctStockIndex = StocksOfUser.findIndex(
+                ({stockName}) => stockName === stock
+            );
+
+            if (correctStockIndex === (-1)) return alert('A ação não foi comprada, então não pode ser vendida');
+    
+            const totalBalance = balance + iptValue;
+            const addingStock = AvailableStocksToInvest.push(StocksOfUser[correctStockIndex]);
+            const removeStock = StocksOfUser.splice(correctStockIndex, 1);
+
+            setUserBalance(totalBalance);
+            setAvailableStocks([...userStocks, addingStock]);
+            setUserStocks(removeStock);
+            setStockInProgress([]);
+            return alert('Venda efetuada com sucesso');
         }
     }
 
@@ -114,18 +145,23 @@ function BuyAndSellPage() {
 
             <input
                 type="number"
-                placeholder="Informe o valor"
+                placeholder="Informe o valor para Compra"
                 onChange={ ({ target: { value } }) => setNewValue(value) }
             />
 
             <button
                 type="button"
                 name="sell-button"
+                onClick={ sellStock }
             >
                 Vender
             </button>
 
-            <input type="number" placeholder="Informe o Valor" />
+            <input
+            type="number"
+            placeholder="Informe o Valor para Venda"
+            onChange={ ({ target: { value } }) => setNewValue(value) }
+            />
 
             <Link to="/stocklist">
                 <button

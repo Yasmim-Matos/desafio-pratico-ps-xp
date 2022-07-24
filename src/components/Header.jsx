@@ -8,23 +8,18 @@ function Header() {
             userEmail,
             userBalance,
         },
-        userStockData: {
-            userStocks,
-        },
     } = useContext(AppContext);
 
     return (
         <header className="header-container">
             <p>
-                Saldo:
+                Saldo: R$
                 {' '}
-                <span className="balance">{ userBalance }</span>
-            </p>
-
-            <p>
-                Total de ações:
-                {' '}
-                <span className="stocks">{ userStocks[1] }</span>
+                <span
+                    className="balance"
+                >
+                    { userBalance }
+                </span>
             </p>
 
             <p>
