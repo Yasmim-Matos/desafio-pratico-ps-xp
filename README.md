@@ -100,3 +100,14 @@ Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido 
 ![Tela Depósito e Retirada](./images/tela-4-deposito-retirada.png)
 
 </details>
+
+## :compass: Bases para construir o README
+<details>
+  <summary markdown="span"><strong> Bases utilizadas</strong></summary><br />
+
+* READMEs dos projetos da Trybe;
+* [README](https://github.com/raphaelalmeidamartins/sonic-trumps) do projeto Sonic Trumps do colega Raphael Martins;
+* [Git Emojis](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#computer);
+* [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+
+</details>
