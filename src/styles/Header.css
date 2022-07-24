@@ -3,4 +3,7 @@
     font-family: monospace;
     justify-content: space-around;
     padding: 5px;
+    margin: 0;
+    background: rgb(0, 7, 5);
+    color: rgb(255, 199, 8);
 }
