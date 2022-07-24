@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import AppContext from '../context/AppContext';
 import { Link } from 'react-router-dom';
 
@@ -7,6 +7,7 @@ import '../styles/LoginPage.css';
 function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [isDisabled, setIsDisabled] = useState(true);
 
     const {
         userSetters: {
@@ -19,6 +20,22 @@ function LoginPage() {
         setUserEmail(email);
         setUserPassword(password);
     }
+
+    useEffect(() => {
+        const enableButton = () => {
+            /* Source: https://pt.stackoverflow.com/questions/1386/express%C3%A3o-regular-para-valida%C3%A7%C3%A3o-de-e-mail */
+            const verifyEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z][a-z][a-z]+(\.[a-z]+)?$/i;
+            const MIN_CHARACTERES = 5;
+        
+            if (verifyEmail.test(email) && password.length >= MIN_CHARACTERES) {
+                setIsDisabled(false);
+            } else {
+                setIsDisabled(true);
+            }
+        };
+    
+        enableButton();
+    }, [email, password]);
 
     return (
         <main className="login-container">
@@ -33,7 +50,7 @@ function LoginPage() {
                         <input
                             type="email"
                             name="input-email"
-                            placeholder="Insira seu email aqui"
+                            placeholder="Email"
                             onChange={ ({ target: { value } }) => setEmail(value) }
                         />
                     </div>
@@ -43,7 +60,7 @@ function LoginPage() {
                     <input
                         type="password"
                         name="input-password"
-                        placeholder="Insira sua senha aqui"
+                        placeholder="Senha (Minimo 5 caracteres)"
                         onChange={ ({ target: { value } }) => setPassword(value) }
                     />
                     </div>
@@ -53,6 +70,7 @@ function LoginPage() {
                     <button
                         type="button"
                         name="login-button"
+                        disabled={ isDisabled }
                         onClick={ setNewState }
                     >
                         Acessar
