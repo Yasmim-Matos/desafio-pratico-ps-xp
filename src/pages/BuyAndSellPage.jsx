@@ -63,7 +63,29 @@ function BuyAndSellPage() {
     }
 
     const sellStock = () => {
-        
+        const iptValue = Number(inputValue);
+        const balance =  Number(userBalance);
+        const paidValue = Number(stockInProgress[2]);
+        const stock = stockInProgress[0];
+
+        if (iptValue === 0) return alert('Nenhum Valor foi Informado');
+
+        if (paidValue < iptValue) return alert('O valor que foi pago pela ação precisa ser o mesmo que o digitado');
+
+        if (iptValue === paidValue) {
+            const correctStockIndex = StocksOfUser.findIndex(
+                ({stockName}) => stockName === stock
+            );
+    
+            const totalBalance = balance + iptValue;
+            const addingStock = AvailableStocksToInvest.push(StocksOfUser[correctStockIndex]);
+            const removeStock = StocksOfUser.splice(correctStockIndex, 1);
+
+            setUserBalance(totalBalance);
+            setAvailableStocks([...userStocks, addingStock]);
+            setUserStocks(removeStock);
+            setStockInProgress([]);
+            return alert('Venda efetuada com sucesso');
         }
     }
 
