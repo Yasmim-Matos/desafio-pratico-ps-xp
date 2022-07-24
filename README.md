@@ -54,5 +54,12 @@ Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido 
 * HTML
 * Context API
 * Hooks
+* React Router v5
+
+</details>
+
+## :dart: Explicação sobre as tomadas de decisão para desenvolver os códigos do desafio
+<details>
+  <summary markdown="span"><strong>:jigsaw: Descrição das decisões</strong></summary><br />
 
 </details>
