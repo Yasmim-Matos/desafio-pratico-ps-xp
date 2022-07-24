@@ -1,0 +1,43 @@
+.buy-and-sell-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.buy-and-sell-container h1 {
+    margin-bottom: 40px;
+}
+
+.principal-buttons-inputs-buy-sell {
+    margin-top: 35px;
+}
+
+.buy-and-sell-container input {
+    background-color: rgb(245, 244, 244);
+    border: none;
+    border-bottom: 1.5px solid black;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.buy-and-sell-container input:hover {
+    background-color: rgb(224, 224, 224);
+    transition: 0.25s;
+}
+
+.buy-and-sell-container button {
+    background-color: rgb(255, 199, 8);
+    border: 0;
+    border-radius: 2px;
+    color: rgb(0, 0, 0);
+    padding: 5px 12px;
+    margin: 10px 5px;
+}
+
+.buy-and-sell-container button:hover {
+    background-color: rgba(255, 196, 1, 0.707);
+    transition: 0.25s;
+}
