@@ -2,7 +2,7 @@
 
 ## :bookmark_tabs: Sobre
 <details>
-  <summary markdown="span"><strong>Informações gerais sobre o Projeto</strong></summary><br />
+  <summary markdown="span"><strong> Informações gerais sobre o Projeto</strong></summary><br />
 
 Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido por [Yasmim Matos](https://www.linkedin.com/in/yasmimmatos/) com o foco em desenvolver uma aplicação FrontEnd/Mobile para compra e venda de ações. O projeto envolve o desenvolvimento de 4 telas: Tela de Login, Tela de Depósito e Saque, Tela que Lista as ações e Tela de compra e venda de ações, cada uma com suas próprias funções e finalidades. 
 
@@ -12,7 +12,7 @@ Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido 
 
 ## :question: Como compilar e executar o Projeto
 <details>
-  <summary markdown="span"><strong>Descrição dos comandos necessários</strong></summary><br />
+  <summary markdown="span"><strong> Descrição dos comandos necessários</strong></summary><br />
   
 - Clone o repositório:
 
@@ -46,7 +46,7 @@ Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido 
 
 ## :toolbox: Ferramentas Utilizadas
 <details>
-  <summary markdown="span"><strong>Principais Ferramentas</strong></summary><br />
+  <summary markdown="span"><strong> Principais Ferramentas</strong></summary><br />
  
 * React.js
 * JavaScript
@@ -55,12 +55,13 @@ Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido 
 * Context API
 * Hooks
 * React Router v5
+* [IonIcons](https://ionic.io/ionicons)
 
 </details>
 
 ## :dart: Explicação sobre as tomadas de decisão
 <details>
-  <summary markdown="span"><strong>Descrição das decisões</strong></summary><br />
+  <summary markdown="span"><strong> Descrição das decisões</strong></summary><br />
 
 - Decidi usar React.js, React Router (na versão 5), JavaScript, CSS e HTML para desenvolver as 4 telas (Tela de Login, Tela de Depósito e Saque, Tela que Lista as ações e Tela de compra e venda de ações). Escolhi esta versão do React Router e estas tecnologias por conta do tempo de entrega do desafio, por estar mais familiarizada com elas e por conta disso ter mais facilidade de enteder a documentação.
     
@@ -73,7 +74,7 @@ Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido 
 </details>
 
 <details>
-  <summary markdown="span"><strong>Principais dificuldades e aprendizados</strong></summary><br />
+  <summary markdown="span"><strong> Principais dificuldades e aprendizados</strong></summary><br />
 
 - Nesse desafio, apesar de ter escolhido ferramentas que eu tivesse mais familiaridade, isso não diminuiu as dificuldades que tive para desenvolver algumas soluções. A primeira dificuldade foi entender qual era o meu nível de aprendizado até aqui nas tecnologias que eu iria utilizar no projeto pra poder iniciar a aplicação, mas assim que o desafio foi iniciado percebi que consegui superar essa dificuldade buscando os conhecimentos necessários e fazendo pesquisas na internet, e fui construindo a aplicação com muita empolgação e vontade de ver aquilo funcionar e dar certo.
 
