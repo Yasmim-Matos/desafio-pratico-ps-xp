@@ -58,24 +58,17 @@ Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido 
 
 </details>
 
-## :dart: Explicação sobre as tomadas de decisão para desenvolver os códigos do desafio
+## :dart: Explicação sobre as tomadas de decisão
 <details>
   <summary markdown="span"><strong>:jigsaw: Descrição das decisões</strong></summary><br />
 
-- Para conseguir entregar todos os requisitos mínimos e 3 dos 5 requisitos adicionais dentro do prazo (que envolvia cerca de 10 dias para entrega) estipulado para o desafio, precisei me organizar e rever alguns conteúdos. 
-    Nos primeiros dois dias decidi usar React.js, React Router (na versão 5) e o JavaScript para desenvolver as 4 telas.
+- Decidi usar React.js, React Router (na versão 5), JavaScript, CSS e HTML para desenvolver as 4 telas (Tela de Login, Tela de Depósito e Saque, Tela que Lista as ações e Tela de compra e venda de ações). Escolhi esta versão do React Router e estas tecnologias por conta de estar mais familiarizada com elas e ter mais facilidade de enteder a documentação.
     
-- Escolhi esta versão do React Router e estas tecnologias por conta de estar mais familiarizada com elas e ter mais facilidade de enteder a documentação, mas pensei que se houvesse algum tempo no final do projeto, eu iria colocar as rotas na versão 6 do React Router.
+- Apliquei Context API e Hooks nas telas para poder manipular os estados da aplicação, e poder mostrar no componente 'Header' da aplicação o nome do usuário e o seu saldo. Escolhi Context API e Hooks pois não queria deixar o código tão verboso (tornando difícil de ler) e com muitos arquivos para gerenciar a aplicação que continha poucos estados e poucas telas para gerenciar.
 
-- Entre os dias 3 e 6 do prazo, revi conteúdos e me organizei para poder me aprofundar e poder desenvolver nos outros dias sem tantos entraves quanto a conhecimento, principalmente quanto ao React porque foi a ferramenta que mais utilizei para desenvolver a aplicação.
+- Para fazer o acréscimo e decréscimo no saldo do usuário, manipulei o estado do saldo com as Hooks 'useState' e 'useContext' e criei duas funções dentro da tela de 'Depósito e Retirada', uma para depositar dinheiro no saldo dele e outra para retirar o dinheiro.
 
-- No dia 7 apliquei Context API e Hooks nas telas, para poder manipular os estados da aplicação, e poder mostrar no componente 'Header' da aplicação o nome do usuário e o seu saldo. Escolhi Context API e Hooks pois não queria deixar o código tão verboso e com muitos arquivos para gerenciar uma aplicação que não continha muitos estados e muitas telas.
-
-- Já no dia 8 busquei fazer o acréscimo e decréscimo no saldo do usuário, manipulando o seu estado com as Hooks e criando duas funções dentro da tela de 'Depósito e Retirada', uma para depositar dinheiro no saldo dele e outra para retirar o dinheiro.
-
-- No dia 9 desenvolvi as funções para que o usuário conseguisse comprar e vender uma ação, foi bastante complexo pois precisei refatorar alguns códigos que já estavam prontos e eu tinha achado que já estavam completos. Nesse dia desenvolvi também a validação do email e senha do usuário para então poder salvar os dados dele no Local Storage.
-
-- Ainda no dia 9, escolhi um padrão de cores para aplicação e consegui fazer um design com CSS para as 4 páginas. Eu tinha pensado em user Styled Components ou Bootstrap para fazer o design da aplicação, mas como o prazo do desafio estava próximo ao fim, escolhi usar o CSS pois tinha mais conhecimento.
+- Desenvolvi as funções para que o usuário conseguisse comprar e vender uma ação, essa etapa foi bastante complexa pois precisei refatorar alguns códigos que já estavam prontos e eu tinha achado que já estavam completos. Desenvolvi também a validação do email e senha do usuário com uma função que fazia a verificação se o email digitado era válido e se a senha continha mais de 5 caracteres. Feita a validação, criei uma função para armazenar e outra para pegar alguns dados do usuário no Local Storage, como email, nome do usuário, data e hora do acesso. Além disso extraí o nome do usuário do email dele, para poder mostrar apenas o nome dele no 'Header' da aplicação e não o email completo.
 
 </details>
 
