@@ -4,6 +4,8 @@ import AppContext from '../context/AppContext';
 
 import UserStocksData from '../utils/UserStocksData';
 
+import '../styles/StyleForTables.css';
+
 function UserStocksTable() {
     const {
         setTypeOfStock,
@@ -29,7 +31,7 @@ function UserStocksTable() {
             { UserStocksData.length === 0
                     ? <p>Você não tem nenhuma ação comprada</p> 
                     :
-                        <table>
+                        <table className="styled-table">
                             <thead>
                                 <tr>
                                 <th>Nome da Ação</th>

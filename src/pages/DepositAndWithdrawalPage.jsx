@@ -4,6 +4,8 @@ import { useHistory } from "react-router-dom";
 import AppContext from '../context/AppContext';
 import Header from '../components/Header';
 
+import '../styles/DepositAndWithdrawalPage.css';
+
 function DepositAndWithdrawalPage() {
     const [inputValue, setNewValue] = useState(0);
     const history = useHistory();
@@ -46,43 +48,48 @@ function DepositAndWithdrawalPage() {
     }
 
     return (
-        <main className="deposit-withdrawal-container">
+        <main>
             <Header />
-            <h1>Deposit And Withdrawal</h1>
 
-            <p>
-                Saldo em Conta: R$
-                {' '}
-                <span className="balance">{ userBalance }</span>
-            </p>
+            <section className="deposit-withdrawal-container">
 
-            <input
-                type="number"
-                placeholder="Informe o valor"
-                onChange={ ({ target: { value } }) => setNewValue(value) }
-            />
+                <h1>Deposit And Withdrawal</h1>
 
+                <p>
+                    Saldo em Conta: R$
+                    {' '}
+                    <span className="balance">{ userBalance }</span>
+                </p>
 
-            <button
-                type="button"
-                onClick={ increaseBalance }
-            >
-                Depósito
-            </button>
+                <input
+                    type="number"
+                    placeholder="Informe o valor"
+                    onChange={ ({ target: { value } }) => setNewValue(value) }
+                />
 
-            <button
-                type="button"
-                onClick={ decreaseBalance }
-            >
-                Retirada
-            </button>
+                <div className="dep-and-withdrawal-buttons">
+                    <button
+                        type="button"
+                        onClick={ increaseBalance }
+                    >
+                        Depósito
+                    </button>
 
-            <button
-                type="button"
-                onClick={ () => history.goBack() }
-            >
-                Voltar
-            </button>
+                    <button
+                        type="button"
+                        onClick={ decreaseBalance }
+                    >
+                        Retirada
+                    </button>
+
+                    <button
+                        type="button"
+                        onClick={ () => history.goBack() }
+                    >
+                        Voltar
+                    </button>
+                </div>
+            </section>
         </main>
     );
 }
