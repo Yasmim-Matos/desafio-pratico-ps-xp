@@ -32,6 +32,7 @@ function StockListPage() {
                     <button
                         type="button"
                         name="stock-list-button"
+                        id="dep-withdrawal-button"
                     >
                         Depósito/Retirada
                     </button>
