@@ -1,9 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import Header from '../components/Header';
 import AppContext from '../context/AppContext';
-import StocksOfUser from '../utils/StocksOfUser';
-import AvailableStocksToInvest from '../utils/AvailableStocksToInvest';
+
+import UserStocksData from '../utils/UserStocksData';
+import AvailableStocksToInvestData from '../utils/AvailableStocksToInvestData';
 
 function BuyAndSellPage() {
     const [inputValue, setNewValue] = useState(0);
@@ -48,13 +50,13 @@ function BuyAndSellPage() {
         if (iptValue < paidValue) return alert('O valor digitado não é o mesmo que o valor do lote');
 
         if (balance >= iptValue && iptValue === paidValue) {
-            const correctStockIndex = AvailableStocksToInvest.findIndex(
+            const correctStockIndex = AvailableStocksToInvestData.findIndex(
                 ({stockName}) => stockName === stock
             );
     
             const totalBalance = balance - iptValue;
-            const addingStock = StocksOfUser.push(AvailableStocksToInvest[correctStockIndex]);
-            const removeStock = AvailableStocksToInvest.splice(correctStockIndex, 1);
+            const addingStock = UserStocksData.push(AvailableStocksToInvestData[correctStockIndex]);
+            const removeStock = AvailableStocksToInvestData.splice(correctStockIndex, 1);
 
             setUserBalance(totalBalance);
             setAvailableStocks(removeStock);
@@ -75,15 +77,15 @@ function BuyAndSellPage() {
         if (iptValue < paidValue) return alert('O valor que foi pago pela ação precisa ser o mesmo que o digitado');
 
         if (iptValue === paidValue) {
-            const correctStockIndex = StocksOfUser.findIndex(
+            const correctStockIndex = UserStocksData.findIndex(
                 ({stockName}) => stockName === stock
             );
 
             if (correctStockIndex === (-1)) return alert('A ação não foi comprada, então não pode ser vendida');
     
             const totalBalance = balance + iptValue;
-            const addingStock = AvailableStocksToInvest.push(StocksOfUser[correctStockIndex]);
-            const removeStock = StocksOfUser.splice(correctStockIndex, 1);
+            const addingStock = AvailableStocksToInvestData.push(UserStocksData[correctStockIndex]);
+            const removeStock = UserStocksData.splice(correctStockIndex, 1);
 
             setUserBalance(totalBalance);
             setAvailableStocks([...userStocks, addingStock]);
