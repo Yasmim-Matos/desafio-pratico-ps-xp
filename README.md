@@ -77,10 +77,9 @@ Projeto voltado para o desafio prático do processo seletivo da XP desenvolvido 
 
 - Ainda no dia 9, escolhi um padrão de cores para aplicação e consegui fazer um design com CSS para as 4 páginas. Eu tinha pensado em user Styled Components ou Bootstrap para fazer o design da aplicação, mas como o prazo do desafio estava próximo ao fim, escolhi usar o CSS pois tinha mais conhecimento.
 
+</details>
+
 <details>
   <summary markdown="span"><strong>:exploding_head: Principais pontos de dificuldade</strong></summary><br />
 
 </details>
-
-</details>
-
