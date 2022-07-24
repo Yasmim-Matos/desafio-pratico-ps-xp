@@ -43,9 +43,11 @@ function BuyAndSellPage() {
 
         if (iptValue === 0) return alert('Nenhum Valor foi Informado');
 
-        if (balance <= 0 || balance < paidValue) return alert('Saldo Insuficiente');
+        if (balance <= 0) return alert('Saldo Insuficiente');
 
-        if (balance > iptValue || iptValue <= paidValue) {
+        if (iptValue < paidValue) return alert('O valor digitado não é o mesmo que o valor do lote');
+
+        if (balance >= iptValue && iptValue === paidValue) {
             const correctStockIndex = AvailableStocksToInvest.findIndex(
                 ({stockName}) => stockName === stock
             );
@@ -70,12 +72,14 @@ function BuyAndSellPage() {
 
         if (iptValue === 0) return alert('Nenhum Valor foi Informado');
 
-        if (paidValue < iptValue) return alert('O valor que foi pago pela ação precisa ser o mesmo que o digitado');
+        if (iptValue < paidValue) return alert('O valor que foi pago pela ação precisa ser o mesmo que o digitado');
 
         if (iptValue === paidValue) {
             const correctStockIndex = StocksOfUser.findIndex(
                 ({stockName}) => stockName === stock
             );
+
+            if (correctStockIndex === (-1)) return alert('A ação não foi comprada, então não pode ser vendida');
     
             const totalBalance = balance + iptValue;
             const addingStock = AvailableStocksToInvest.push(StocksOfUser[correctStockIndex]);
