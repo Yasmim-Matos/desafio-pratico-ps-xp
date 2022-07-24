@@ -4,6 +4,8 @@ import AppContext from '../context/AppContext';
 
 import AvailableStocksToInvestData from '../utils/AvailableStocksToInvestData';
 
+import '../styles/StyleForTables.css';
+
 function AvailableStocksToInvestTable() {
     const {
         setTypeOfStock,
@@ -29,7 +31,7 @@ function AvailableStocksToInvestTable() {
             { AvailableStocksToInvestData.length === 0
                     ? <p>Não existe nenhuma ação disponível para investir no momento</p> 
                     :
-                    <table>
+                    <table className="styled-table">
                         <thead>
                             <tr>
                                 <th>Nome da Ação</th>
