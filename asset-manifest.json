@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/desafio-pratico-ps-xp/static/css/main.63e9e5f6.css",
-    "main.js": "/desafio-pratico-ps-xp/static/js/main.f756a791.js",
+    "main.css": "/desafio-pratico-ps-xp/static/css/main.1bdd1046.css",
+    "main.js": "/desafio-pratico-ps-xp/static/js/main.91040b65.js",
     "static/js/787.bfb0fef3.chunk.js": "/desafio-pratico-ps-xp/static/js/787.bfb0fef3.chunk.js",
     "index.html": "/desafio-pratico-ps-xp/index.html",
-    "main.63e9e5f6.css.map": "/desafio-pratico-ps-xp/static/css/main.63e9e5f6.css.map",
-    "main.f756a791.js.map": "/desafio-pratico-ps-xp/static/js/main.f756a791.js.map",
+    "main.1bdd1046.css.map": "/desafio-pratico-ps-xp/static/css/main.1bdd1046.css.map",
+    "main.91040b65.js.map": "/desafio-pratico-ps-xp/static/js/main.91040b65.js.map",
     "787.bfb0fef3.chunk.js.map": "/desafio-pratico-ps-xp/static/js/787.bfb0fef3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.63e9e5f6.css",
-    "static/js/main.f756a791.js"
+    "static/css/main.1bdd1046.css",
+    "static/js/main.91040b65.js"
   ]
 }
