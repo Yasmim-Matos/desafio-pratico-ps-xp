@@ -16,13 +16,13 @@ function StockListPage() {
                 <h1>Lista de Ações</h1>
 
                 <div className="user-stocks-container">
-                    <h3>Minhas ações</h3>
+                    <h3>Minhas Ações</h3>
 
                     <UserStocksTable />
                 </div>
 
                 <div className="stocks-available-table-container">
-                    <h3>Disponíveis para investir</h3>
+                    <h3>Disponíveis para Investir</h3>
 
                     <AvailableStocksToInvestTable />
                 </div>
