@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import AppContext from '../context/AppContext';
 import { Link } from 'react-router-dom';
 
+import '../styles/LoginPage.css';
+
 function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
