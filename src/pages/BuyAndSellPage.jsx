@@ -104,7 +104,7 @@ function BuyAndSellPage() {
 
             <section className="buy-and-sell-container">
 
-                <h1>Buy And Sell</h1>
+                <h1>Compra e Venda de Ações</h1>
 
                 { typeOfStock === 1
                     ? 
@@ -144,33 +144,37 @@ function BuyAndSellPage() {
                 }
                 
                 <div className="principal-buttons-inputs-buy-sell">
-                    <button
-                        type="button"
-                        name="buy-button"
-                        onClick={ buyStock }
-                    >
-                        Comprar
-                    </button>
+                    <div id="first-button-input-buy-sell">
+                        <button
+                            type="button"
+                            name="buy-button"
+                            onClick={ buyStock }
+                        >
+                            Comprar
+                        </button>
 
-                    <input
+                        <input
+                            type="number"
+                            placeholder="Informe o Valor da Compra"
+                            onChange={ ({ target: { value } }) => setNewValue(value) }
+                        />
+                    </div>
+
+                    <div id="second-button-input-buy-sell">
+                        <button
+                            type="button"
+                            name="sell-button"
+                            onClick={ sellStock }
+                        >
+                            Vender
+                        </button>
+
+                        <input
                         type="number"
-                        placeholder="Informe o Valor da Compra"
+                        placeholder="Informe o Valor da Venda"
                         onChange={ ({ target: { value } }) => setNewValue(value) }
-                    />
-
-                    <button
-                        type="button"
-                        name="sell-button"
-                        onClick={ sellStock }
-                    >
-                        Vender
-                    </button>
-
-                    <input
-                    type="number"
-                    placeholder="Informe o Valor da Venda"
-                    onChange={ ({ target: { value } }) => setNewValue(value) }
-                    />
+                        />
+                    </div>
                 </div>
 
                 <div className="buy-and-sell-redirect-buttons">
