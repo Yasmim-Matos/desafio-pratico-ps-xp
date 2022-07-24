@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import AppContext from './AppContext';
 
-import AvailableStocksToInvest from '../utils/AvailableStocksToInvest';
-import StocksOfUser from '../utils/StocksOfUser';
+import AvailableStocksToInvestData from '../utils/AvailableStocksToInvestData';
+import UserStocksData from '../utils/UserStocksData';
 
 function AppProvider({ children }) {
     const [userEmail, setUserEmail] = useState('');
@@ -11,8 +11,8 @@ function AppProvider({ children }) {
 
     const [userBalance, setUserBalance] = useState(0);
 
-    const [userStocks, setUserStocks] = useState([StocksOfUser]);
-    const [availableStocks, setAvailableStocks] = useState([AvailableStocksToInvest]);
+    const [userStocks, setUserStocks] = useState([UserStocksData]);
+    const [availableStocks, setAvailableStocks] = useState([AvailableStocksToInvestData]);
 
     const [stockInProgress, setStockInProgress] = useState([]);
     const [typeOfStock, setTypeOfStock] = useState(0);
