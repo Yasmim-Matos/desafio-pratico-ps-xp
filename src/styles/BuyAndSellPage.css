@@ -7,7 +7,9 @@
 }
 
 .buy-and-sell-container h1 {
-    margin-bottom: 40px;
+    border-bottom: 2px black solid;
+    padding: 15px;
+    margin-bottom: 30px;
 }
 
 .principal-buttons-inputs-buy-sell {
@@ -28,6 +30,10 @@
     transition: 0.25s;
 }
 
+#first-button-input-buy-sell button, #second-button-input-buy-sell button {
+    width: 80px;
+}
+
 .buy-and-sell-container button {
     background-color: rgb(255, 199, 8);
     border: 0;
@@ -40,4 +46,8 @@
 .buy-and-sell-container button:hover {
     background-color: rgba(255, 196, 1, 0.707);
     transition: 0.25s;
+}
+
+.buy-and-sell-redirect-buttons {
+    margin-top: 25px;
 }
